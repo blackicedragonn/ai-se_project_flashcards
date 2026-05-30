@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flash Cards</title>
+    <link rel="icon" href="./favicon.ico">
+    <link rel="stylesheet" href="./assets/vendor/normalize.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body class="page">
+
+    <header class="header">
+        <h1 class="header__title">
+            <a href="#home" class="header__link">Flash Cards</a>
+        </h1>
+        <nav class="nav">
+            <ul class="nav__links">
+                <li><a href="#home" class="nav__link">My Decks</a></li>
+                <li><a href="#about" class="nav__link">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page__main-content">
+        <!-- Home View -->
+        <section id="home" class="decks">
+            <h2 class="decks__title">My Decks</h2>
+         
+
+            <template id="deck-template">
+                <li class="deck">
+                    <a href="#" class="deck__link"></a>
+                    <h3 class="deck__title"></h3>
+                    <div class="deck__row">
+                        <p class="deck__count"></p>
+                        <button class="deck__delete-btn" type="button" aria-label="Delete this deck"></button>
+                    </div>
+                </li>
+            </template>
+
+            <button class="decks__new-deck-btn" type="button">+ New Deck</button>
+        <ul class="decks__list"></ul>
+        </section>
+
+        <!-- Carousel View -->
+        <section id="carousel" class="carousel">
+            <h2 class="carousel__title"></h2>
+            
+            <div class="carousel__row">
+                <button type="button" class="carousel__btn carousel__btn_type_left" aria-label="Previous card"></button>
+                
+                <div class="carousel__card">
+                    <p class="carousel__card-text"></p>
+                </div>
+                
+                <button type="button" class="carousel__btn carousel__btn_type_right" aria-label="Next card"></button>
+            </div>
+            
+            <button type="button" class="carousel__btn carousel__btn_type_flip" aria-label="Flip card"></button>
+        </section>
+
+        <!-- 404 View -->
+        <section id="not-found" class="not-found">
+            <h2>404 Not Found</h2>
+            <p>The page you're looking for doesn't exist.</p>
+            <a href="#home">← Return to My Decks</a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__text">© 2026 Flash Cards</p>
+    </footer>
+
+    <script type="module" src="./assets/js/index.js"></script>
+</body>
+</html>
