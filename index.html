@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flash Cards</title>
+    <link rel="icon" href="./favicon.ico">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body class="page">
+
+    <header class="header">
+        <h1 class="header__title">
+            <a href="#home" class="header__link">Flash Cards</a>
+        </h1>
+        <nav class="nav">
+            <ul class="nav__links">
+                <li><a href="#home" class="nav__link">My Decks</a></li>
+                <li><a href="#about" class="nav__link">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page__main-content">
+        <!-- Home / Gallery View -->
+        <section id="home" class="gallery">
+            <h2 class="gallery__title">My Decks</h2>
+            
+            <template id="card-template">
+                <li class="card">
+                    <a href="#" class="card__link"></a>
+                    <h3 class="card__title"></h3>
+                    <div class="card__row">
+                        <p class="card__count"></p>
+                        <button class="card__btn card__btn_type_delete" type="button" aria-label="Delete deck"></button>
+                    </div>
+                </li>
+            </template>
+
+            <button class="gallery__new-card-btn" type="button">+ New Deck</button>
+            <ul class="gallery__list"></ul>
+        </section>
+
+        <!-- Deck View -->
+        <section id="deck-view" class="gallery">
+            <div class="gallery__header">
+                <h2 class="gallery__title"></h2>
+                <button class="gallery__practice-btn" type="button">Practice</button>
+            </div>
+            
+            <template id="flashcard-template">
+                <li class="card">
+                    <div class="card__content">
+                        <p class="card__text"></p>
+                    </div>
+                    <div class="card__row">
+                        <button type="button" class="card__btn card__btn_type_flip" aria-label="Flip card"></button>
+                        <button type="button" class="card__btn card__btn_type_delete" aria-label="Delete card"></button>
+                    </div>
+                </li>
+            </template>
+
+            <button class="gallery__new-card-btn gallery__new-card-btn_location_deck-view" type="button">+ New Card</button>
+            <ul class="gallery__list"></ul>
+        </section>
+
+        <!-- Carousel View -->
+        <section id="carousel" class="carousel">
+            <h2 class="carousel__title"></h2>
+            <div class="carousel__grid">
+                <button type="button" class="carousel__btn carousel__btn_type_left" aria-label="Previous card"></button>
+                <div class="carousel__card">
+                    <p class="carousel__card-text"></p>
+                </div>
+                <button type="button" class="carousel__btn carousel__btn_type_right" aria-label="Next card"></button>
+                <button type="button" class="carousel__btn carousel__btn_type_flip" aria-label="Flip card"></button>
+            </div>
+        </section>
+
+        <!-- 404 View -->
+        <section id="not-found" class="not-found">
+            <h2>404 Not Found</h2>
+            <p>The page you're looking for doesn't exist.</p>
+            <a href="#home">← Return to My Decks</a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__text">© 2026 Flash Cards</p>
+    </footer>
+
+    <script type="module" src="./assets/js/index.js"></script>
+</body>
+</html>
